@@ -28,6 +28,10 @@ public class S2 {
         g.drawLine((int)pp1.x, (int)pp1.y, (int)pp2.x, (int)pp2.y);
     }
 
+    void drawPoint(Graphics g, V2 p){
+        V2 pp=transform(p);
+        g.fillOval((int)pp.x-1, (int)pp.y-1, 2,2);
+    }
 
     void drawAxis(Graphics g){
         drawLine(g, origo, new V2(1,0));

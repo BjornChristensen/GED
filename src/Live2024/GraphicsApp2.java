@@ -20,11 +20,25 @@ public class GraphicsApp2 extends JFrame {
 
     class DrawPanel extends JPanel {
         S2 S=new S2(50,50, 120,300);
+        int N=5;
+        V2[] points=new V2[N];
+
+        DrawPanel(){
+            double v=2*Math.PI/N;
+            for (int i=0; i<N; i++){
+                double x=Math.cos(i*v);
+                double y=Math.sin(i*v);
+                points[i]=new V2(x,y);
+            }
+        }
+
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
-            g.drawOval(170-5, 200-5, 10, 10);
-            S.drawLine(g, new V2(0,0), new V2(1,2));
             S.drawAxis(g);
+            for (int i=0; i<N; i++){
+                int j=(i+N/2)%N;
+                S.drawLine(g, points[i], points[j]);
+            }
         }
     } // class DrawPanel
 
