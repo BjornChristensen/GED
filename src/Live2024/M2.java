@@ -20,4 +20,5 @@ public class M2 {
         return new M2(a*m.a+b*m.c, a*m.b+b*m.d,
                       c*m.a+d*m.c, c*m.b+d*m.d);
     }
+
 }
