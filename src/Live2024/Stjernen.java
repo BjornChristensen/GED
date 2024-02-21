@@ -2,19 +2,18 @@ package Live2024;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Random;
 
-public class GraphicsApp2 extends JFrame {
+public class Stjernen extends JFrame {
     public static void main(String[] args) {
-        JFrame frame = new GraphicsApp2();
+        JFrame frame = new Stjernen();
         frame.setSize(700, 700);
-        frame.setTitle("GraphicsApp");
+        frame.setTitle("Stjernen");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null); // Center the frame
         frame.setVisible(true);
     }
 
-    public GraphicsApp2() {
+    public Stjernen() {
         add(new DrawPanel());
     }
 
