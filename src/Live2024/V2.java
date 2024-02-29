@@ -12,6 +12,10 @@ public class V2 {
         return new V2(x+ v.x, y+ v.y);
     }
 
+    V2 sub(V2 v) {
+        return new V2(x- v.x, y- v.y);
+    }
+
     V2 mul(double s){
         return new V2(s*x, s*y);
     }
